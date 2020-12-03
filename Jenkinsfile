@@ -25,7 +25,7 @@ pipeline {
                 {withSonarQubeEnv('sonar') { 
                 bat 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar'
                 }
-            }
+            
         }
 
         stage('Run') {
