@@ -11,6 +11,7 @@ pipeline {
             steps {
                 dir ('G:\\Jenkins\\Tarea5\\ejemplo-maven')
                 {bat 'mvnw.cmd clean test -e'}
+                
             }
         }
         stage('Jar') {
