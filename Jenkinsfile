@@ -23,7 +23,7 @@ pipeline {
         stage('SonarQube analysis') {
             steps{
                 dir ('G:\\Jenkins\\Tarea5\\ejemplo-maven')
-                {withSonarQubeEnv(sonar) { 
+                {withSonarQubeEnv('sonar') { 
                 bat 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar'
                 }
             }
