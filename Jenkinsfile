@@ -6,17 +6,17 @@ pipeline {
     stages {
                 stage('Compile') {
                     steps {
-                            bat './mvnw clean compile -e'
+                            bat 'mvnw.cmd clean compile -e'
                     }
                 }
                 stage('Unit') {
                     steps {
-                            bat './mvnw clean test -e'
+                            bat 'mvnw.cmd clean test -e'
                     }
                 }
                 stage('Jar') {
                     steps {
-                            bat 'mvnw clean package -e'
+                            bat 'mvnw.cmd clean package -e'
                             bat 'pwd'
                     }
                 }
@@ -36,7 +36,7 @@ pipeline {
                         groupId: 'com.devopsusach2020',
                         version: '0.0.1',
                         repository: 'test-nexus',
-                        credentialsId: 'nexus',
+                        credentialsId: 'nexus-local',
                         artifacts: [
                             [artifactId: 'DevOpsUsach2020',
                             classifier: '',
