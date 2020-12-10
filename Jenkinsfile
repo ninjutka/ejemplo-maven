@@ -17,7 +17,6 @@ pipeline {
                 stage('Jar') {
                     steps {
                             bat 'mvnw.cmd clean package -e'
-                            bat 'pwd'
                     }
                 }
                 //stage('SonarQube analysis') {
