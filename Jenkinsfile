@@ -47,7 +47,7 @@ pipeline {
                 //}
                 stage('Run') {
                     steps {
-                            bat 'nohup bash ./mvnw spring-boot:run &'
+                            bat 'start mvnw.cmd spring-boot:run'
                     }
                 }
                 stage('Test') {
