@@ -53,7 +53,7 @@ pipeline {
                 stage('Test') {
                     steps {
                             sleep(time: 10, unit: "SECONDS")
-                            bat 'curl -X GET "http:localhost:8081/rest/mscovid/test?msg=testing"'
+                            {bat 'curl -X GET "http:localhost:8081/rest/mscovid/test?msg=testing"'}
                     }
                 }
         }
